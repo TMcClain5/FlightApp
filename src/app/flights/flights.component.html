@@ -1,0 +1,20 @@
+<clr-datagrid class="table">
+  <clr-dg-column>
+    Price
+  </clr-dg-column>
+  <clr-dg-column>
+    Direct
+  </clr-dg-column>
+  <clr-dg-column>
+    CarrierId
+  </clr-dg-column>
+  <clr-dg-column>
+    Departure Date
+  </clr-dg-column>
+  <clr-dg-row *clrDgItems="let quote of quote.Quotes" [clrDgItem]="quote">
+    <clr-dg-cell>{{quote.MinPrice}}</clr-dg-cell>
+    <clr-dg-cell>{{quote.Direct}}</clr-dg-cell>
+    <clr-dg-cell>{{quote.OutboundLeg.CarrierIds}}</clr-dg-cell>
+    <clr-dg-cell>{{quote.OutboundLeg.DepartureDate}}</clr-dg-cell>
+  </clr-dg-row>
+</clr-datagrid>
